@@ -17,7 +17,8 @@ app.get("/", (req, res) => {
     creator: "silentLad",
     creation: "gyaankosh",
     description:
-      "Kya aap apne dost ko zaleel krne ke liye gaaliya dhundh rhe he? Aapki khoj yaha khatam hoti he ..swagat he gyaankosh main"
+      "Kya aap apne dost ko zaleel krne ke liye gaaliya dhundh rhe he? Aapki khoj yaha khatam hoti he ..swagat he gyaankosh main",
+    HumseJudiye: "https://github.com/silent-lad/gyaanKosh"
   });
 });
 

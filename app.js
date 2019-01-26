@@ -13,7 +13,7 @@ var gyaansagar = require("./gyaansagar.json");
 app.get("/search/:term", (req, res) => {
   var term = req.params.term;
   var result = gyaansagar.filter(shabd => {
-    if (shabd.toLowerCase().includes(term)) return shabd;
+    if (shabd.toLowerCase().includes(term.toLowerCase())) return shabd;
   });
   res.json(result);
 });

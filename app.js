@@ -12,6 +12,11 @@ app.use(logger("dev"));
 
 var gyaansagar = require("./gyaansagar.json");
 
+var http = require("http");
+setInterval(function() {
+  http.get("https://gyaankosh.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
+
 app.get("/", (req, res) => {
   res.json({
     creator: "silentLad",

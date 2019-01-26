@@ -4,6 +4,8 @@ const logger = require("morgan");
 
 var app = express();
 
+server.set("port", process.env.PORT || 8080);
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
@@ -18,6 +20,11 @@ app.get("/search/:term", (req, res) => {
   res.json(result);
 });
 
-app.listen("5000", () => {
+app.get("/feelinglucky", (req, res) => {
+  var randomIndex = Math.floor(Math.random() * gyaansagar.length + 1);
+  res.json({ "yeLijiye<3": gyaansagar[randomIndex] });
+});
+
+app.listen(app.get("port"), () => {
   console.log("Listeneing at port 5000");
 });

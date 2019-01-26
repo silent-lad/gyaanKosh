@@ -1,7 +1,7 @@
 # GyaanKosh
 
 **Gyaan Kosh main aapka swagat he**
-If you want any new features please drop a issue
+If you want any new features please drop an issue
 
 ## How to use :-
 

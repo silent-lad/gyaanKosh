@@ -12,6 +12,15 @@ app.use(logger("dev"));
 
 var gyaansagar = require("./gyaansagar.json");
 
+app.get("/", (req, res) => {
+  res.json({
+    creator: "silentLad",
+    creation: "gyaankosh",
+    description:
+      "Kya aap apne dost ko zaleel krne ke liye gaaliya dhundh rhe he? Aapki khoj yaha khatam hoti he ..swagat he gyaankosh main"
+  });
+});
+
 app.get("/search/:term", (req, res) => {
   var term = req.params.term;
   var result = gyaansagar.filter(shabd => {

@@ -4,7 +4,7 @@ const logger = require("morgan");
 
 var app = express();
 
-server.set("port", process.env.PORT || 8080);
+app.set("port", process.env.PORT || 8080);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

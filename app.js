@@ -8,11 +8,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
-var gyaansagar = require("./gyaansagar.js");
+var gyaansagar = require("./gyaansagar.json");
 
 app.get("/search/:term", (req, res) => {
   var term = req.params.term;
-  var result = gyaansagar.map(shabd => {
+  var result = gyaansagar.filter(shabd => {
     if (shabd.toLowerCase().includes(term)) return shabd;
   });
   res.json(result);

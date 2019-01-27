@@ -32,6 +32,13 @@ app.get("/search/:term", (req, res) => {
   var result = gyaansagar.filter(shabd => {
     if (shabd.toLowerCase().includes(term.toLowerCase())) return shabd;
   });
+  if (result.length == 0) {
+    res.json({
+      Suchna: "Isse milta julta shabd humare gyaankosh main filhal nhi he",
+      Madad_kijiye:
+        "Iss link pr jaakr humara database badhane main madad kre ( https://github.com/silent-lad/gyaanKosh )"
+    });
+  }
   res.json(result);
 });
 
